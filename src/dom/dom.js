@@ -8,15 +8,28 @@
  * You need to change the color of the html element with the id "change-my-color"
  */
 export function getElementFromDomAndChangeColorToRed() {
+    let element = document.getElementById("change-my-color");
+    element.style.color = "red";
+}/**
+ * Find and replace in the provided string, but preserving case
+ * If the new word is longer than the replaced one, ignore tail characters
+ * @param {string} needle
+ * @param {string} haystack
+ * @param {string} newWord
+ * @return {string} true if n is bigger than 2
+ */
+export function findAndReplacePreservingCase(needle, haystack, newWord) {
     //
 }
+
 
 /**
  * You need to add two paragraph in the div with id "add-your-elements-in-this-element"
  * The first paragraph must contain "Bonjour", the second "Toto"
  */
 export function addElementsInDOM() {
-    //
+    let container = document.getElementById("add-your-elements-in-this-element");
+    container.innerHTML = '<p>Bonjour</p><p>Toto</p>';
 }
 
 /**
@@ -26,5 +39,6 @@ export function addElementsInDOM() {
  * @param {array<{name: string, color: string}>} listElements
  */
 export function addAListInDomFromAnArrayOfObjects(listElements) {
-    //
+    let container = document.getElementById("add-list-here");
+    container.innerHTML = `<ul>${listElements.map(item => `<li style="background-color: ${item.color};">${item.name}</li>`).join('')}</ul>`;
 }
