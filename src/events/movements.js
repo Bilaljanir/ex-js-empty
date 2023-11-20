@@ -4,8 +4,15 @@
  * You need to display coordinates as follows : "x: 232, y: 332
  */
 export function mouseMovements() {
-  //
+    const displayElement = document.getElementById('mouse-coordinates');
+    const updateMousePosition = (event) => {
+        const x = event.clientX;
+        const y = event.clientY;
+        displayElement.textContent = `x: ${x}, y: ${y}`;
+    };
+    document.addEventListener('mousemove', updateMousePosition);
 }
+
 
 /**
  * On the page, you have an input with the id "focus-me".
