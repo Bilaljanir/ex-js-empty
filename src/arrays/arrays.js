@@ -3,7 +3,7 @@
  * @return {array<string>} An array with all words isolated, and with empty strings removed
  */
 export function splitAllStringsByWordAndFilterEmptyOnes(array) {
-  //
+  return [...array]
 }
 
 /**

@@ -61,7 +61,7 @@ export function hoverFocusAndBlur() {
 export function changesOnInputEvents() {
     const inputElement = document.getElementById('focus-me');
     const labelElements = document.querySelectorAll('label[for="focus-me"]');
-    let defaultBorderColor = ''; // To keep track of the default border color
+    let defaultBorderColor = '';
     const getRandomColor = () => '#' + Math.floor(Math.random() * 16777215).toString(16);
     const updateDefaultColor = () => {
         defaultBorderColor = getRandomColor();
