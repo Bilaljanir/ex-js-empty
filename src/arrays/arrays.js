@@ -2,9 +2,13 @@
  * @param {array<string>} array An array containing words and sentences
  * @return {array<string>} An array with all words isolated, and with empty strings removed
  */
+
 export function splitAllStringsByWordAndFilterEmptyOnes(array) {
-  return [...array]
+    return array
+        .map(str => str.split(' '))
+        .flatMap(words => words.filter(word => word !== ''));
 }
+
 
 /**
  * @param {*[]} array1
@@ -13,7 +17,8 @@ export function splitAllStringsByWordAndFilterEmptyOnes(array) {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
 export function concatenateArrays(array1, array2) {
-  //
+    //
+    return array1.concat(array2)
 }
 
 /**
@@ -22,10 +27,9 @@ export function concatenateArrays(array1, array2) {
  * @param {...*} newElements
  * @return {array<*>} A new array, sorted, **the original array should not be modified**
  */
-export function replaceElementsInArrayAtAGivenPlace(
-  array,
-  index,
-  ...newElements
-) {
-  //
+export function replaceElementsInArrayAtAGivenPlace(array, index, ...newElements) {
+    //
+    let newArray = [...array]
+    newArray.splice(index, newElements.length, newElements)
+    return newArray.flat()
 }

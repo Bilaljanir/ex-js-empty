@@ -5,9 +5,6 @@
  * you have to call this url : https://api.github.com/octocat
  * Then, you have to display the content returned by the api on the "pre" tag with id "display-here"
  */
-export async function fetchDataOnClick() {
-    const response = await fetch("https://api.github.com/octocat");
-    console.log(response)
-    
+export function fetchDataOnClick() {
+    //
 }
-
